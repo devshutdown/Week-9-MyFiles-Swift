@@ -1,26 +1,26 @@
 //
-//  LoadExternalViewController.swift
+//  ExternalPDFViewController.swift
 //  MyFilesSwift9
 //
-//  Created by Charles Konkol on 3/16/15.
-//  Copyright (c) 2015 Rock Valley College. All rights reserved.
+//  Created by cis290 on 10/17/16.
+//  Copyright © 2016 Rock Valley College. All rights reserved.
 //
 
 import UIKit
 
-class LoadExternalViewController: UIViewController {
-    
-    @IBOutlet weak var webview: UIWebView!
-   
-    @IBAction func btnBack(sender: UIBarButtonItem) {
-         self.dismissViewControllerAnimated(false, completion: nil)
-        
-    }
+class ExternalPDFViewController: UIViewController {
 
+    @IBOutlet weak var webview: UIWebView!
+    
+    @IBAction func btnBack(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(false, completion: nil)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-         LoadExternalPDF()
-        
+        LoadExternalPDF()
+
         // Do any additional setup after loading the view.
     }
 
@@ -32,8 +32,9 @@ class LoadExternalViewController: UIViewController {
     func LoadExternalPDF()
     {
         //webview.loadLocalPDF("testers")
-        webview.loadExternalPDF("http://ckonkol.com/cis280/Fall2015AppsCIS280.pdf")
+        webview.loadExternalPDF("http://ckonkol.com/wp-content/uploads/2015/02/Spring-2015-Apps-CIS280-3.pdf")
     }
+
     /*
     // MARK: - Navigation
 
